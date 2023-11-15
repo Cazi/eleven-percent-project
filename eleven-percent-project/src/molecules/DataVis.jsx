@@ -699,52 +699,51 @@ const percentRange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const DataVis = () => {
     const [graph, setGraph] = useState('studentsBar')
+    let displayGraph;
     if (graph === "studentsBar") {
-        return (
-            <div>
-                <StudentBarGraph tickValues={yearValues} data={studentData} />
-                <GraphButtons setGraph={setGraph} />
-            </div>
-        )
+        displayGraph =
+            <>
+                <StudentBarGraph
+                    tickValues={yearValues}
+                    data={studentData} />
+            </>
     } else if (graph === "studentsPercent") {
-        return (
-            <div>
+        displayGraph =
+            <>
                 <StudentPercentageGraph
                     tickValuesX={yearValues}
                     tickValuesY={percentRange}
                     data={studentData} />
-                <GraphButtons setGraph={setGraph} />
-            </div>
-        )
+            </>
     } else if (graph === "undergradBar") {
-        return (
-            <div>
+        displayGraph =
+            <>
                 <UgBarGraph />
-                <GraphButtons setGraph={setGraph} />
-            </div>
-        )
+            </>
     } else if (graph === "undergradPercent") {
-        return (
-            <div>
+        displayGraph =
+            <>
                 <UgPercentageGraph />
-                <GraphButtons setGraph={setGraph} />
-            </div>
-        )
+            </>
     } else if (graph === "gradBar") {
-        return (<div></div>)
+        return (<>Placeholder 1</>)
     } else if (graph === "gradPercent") {
-        return (<div></div>)
+        return (<>Placeholder 2</>)
     } else {
-        return (
-            <div>
+        displayGraph =
+            <>
                 <StudentPercentageGraph
                     tickValuesX={yearValues}
                     tickValuesY={percentRange}
                     data={studentData} />
-                <GraphButtons setGraph={setGraph} />
-            </div>
-        )
+            </>
     }
+    return (
+        <div>
+            {displayGraph}
+            <GraphButtons setGraph={setGraph} />
+        </div>
+    )
 }
 
 
