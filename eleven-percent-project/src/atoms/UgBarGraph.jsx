@@ -1,6 +1,6 @@
 import React from 'react'
 import { VictoryChart, VictoryAxis, VictoryBar, VictoryLabel, VictoryTheme } from 'victory'
-const TotalStudentsBarGraph = ({ tickValues, data }) => {
+const UgBarGraph = ({ tickValues, data }) => {
     return (
         <div>
             <VictoryChart
@@ -27,13 +27,13 @@ const TotalStudentsBarGraph = ({ tickValues, data }) => {
                     orientation="left"
                     domain={{ y: [100, 12000] }}
                 />
-                {/* Total students at Brown bar */}
+                {/* Total undergraduate students at Brown bar */}
                 <VictoryBar
                     data={data}
                     x="Year"
                     y="TOTAL STUDENTS"
                 />
-                {/* Total Black Students at Brown bar */}
+                {/* Total Black undergraduate students at Brown bar */}
                 <VictoryBar
                     style={{ data: { fill: "#c43a31" } }}
                     data={data}
@@ -45,4 +45,4 @@ const TotalStudentsBarGraph = ({ tickValues, data }) => {
     )
 }
 
-export default TotalStudentsBarGraph
+export default UgBarGraph

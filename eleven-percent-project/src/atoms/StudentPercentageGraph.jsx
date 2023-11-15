@@ -1,6 +1,6 @@
 import React from 'react'
 import { VictoryChart, VictoryAxis, VictoryBar, VictoryLabel, VictoryTheme, VictoryLine } from 'victory'
-const TotalStudentPercentageGraph = ({ tickValuesX,tickValuesY, data }) => {
+const StudentPercentageGraph = ({ tickValuesX,tickValuesY, data }) => {
     return (
         <div>
             <VictoryChart
@@ -29,4 +29,4 @@ const TotalStudentPercentageGraph = ({ tickValuesX,tickValuesY, data }) => {
     )
 }
 
-export default TotalStudentPercentageGraph
+export default StudentPercentageGraph
