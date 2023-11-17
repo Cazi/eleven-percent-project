@@ -2,7 +2,7 @@ import React from 'react'
 import GraphButton from '../atoms/GraphButton'
 const GraphButtons = ({setGraph}) => {
   return (
-    <div className='GraphButtons'>
+    <div className='graph-buttons'>
         <GraphButton setGraph={setGraph} graphName={"studentsBar"}/>
         <GraphButton setGraph={setGraph} graphName={"studentsPercent"}/>
         <GraphButton setGraph={setGraph} graphName={"undergradBar"}/>

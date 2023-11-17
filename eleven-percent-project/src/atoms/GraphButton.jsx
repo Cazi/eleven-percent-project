@@ -5,8 +5,8 @@ const GraphButton = ({ setGraph, graphName }) => {
         <div>
             <button onClick={
                 () => {
-                    setGraph({ graphName })
-                    console.log({ graphName })
+                    setGraph(graphName)
+                    console.log(graphName)
                 }}>
                 {graphName}
             </button>
