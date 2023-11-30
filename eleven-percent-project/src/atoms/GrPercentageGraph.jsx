@@ -1,6 +1,6 @@
 import React from 'react'
 import { VictoryChart, VictoryAxis, VictoryBar, VictoryLabel, VictoryTheme, VictoryLine } from 'victory'
-const StudentPercentageGraph = ({ tickValuesX,tickValuesY, data }) => {
+const GrPercentageGraph = ({ tickValuesX, tickValuesY, data }) => {
     return (
         <div>
             <VictoryChart
@@ -15,18 +15,19 @@ const StudentPercentageGraph = ({ tickValuesX,tickValuesY, data }) => {
                 <VictoryAxis
                     tickValues={tickValuesX}
                     domain={{ x: [1980, 2022] }} />
+
                 <VictoryAxis dependentAxis
                     orientation='left'
                     tickValues={tickValuesY}
-                    domain={{ y: [5, 10] }} />
+                    domain={{ y: [0, 10] }} />
 
                 <VictoryLine
                     data={data}
-                    x="Year"
-                    y="Percentage" />
+                    x="YEAR"
+                    y="PERCENTAGE" />
             </VictoryChart>
         </div>
     )
 }
 
-export default StudentPercentageGraph
+export default GrPercentageGraph

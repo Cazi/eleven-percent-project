@@ -5,7 +5,7 @@ const StudentBarGraph = ({ tickValues, data }) => {
         <div>
             <VictoryChart
                 theme={VictoryTheme.material}
-                style={{ parent: { maxWidth: "75%" } }}
+                style={{ parent: { maxWidth: "90%" } }}
                 width={1500}
                 height={1000}
                 domainPadding={{ x: 25 }}
@@ -14,12 +14,6 @@ const StudentBarGraph = ({ tickValues, data }) => {
                 <VictoryAxis
                     tickValues={tickValues}
                     domain={{ x: [1980, 2022] }}
-                    label='Years (1980 - 2022)'
-                    labelComponent={
-                        <VictoryLabel
-                            dy={-1000}
-                        />
-                    }
                 />
 
                 {/* Y axis for student count */}

@@ -3,7 +3,6 @@ import DataVis from './molecules/DataVis'
 
 
 const App = () => {
-
   return (
     <DataVis/>
   )

@@ -1,3 +1,8 @@
 
-.graph-buttons {}
+.graph-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: left right 10%;
+}
 .graph-button {}

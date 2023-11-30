@@ -5,39 +5,33 @@ const UgBarGraph = ({ tickValues, data }) => {
         <div>
             <VictoryChart
                 theme={VictoryTheme.material}
-                style={{ parent: { maxWidth: "75%" } }}
+                style={{ parent: { maxWidth: "90%" } }}
                 width={1500}
                 height={1000}
-                domainPadding={{ x: 25 }}
+                domainPadding={{ x: 50 }}
             >
                 {/* X axis for years */}
                 <VictoryAxis
                     tickValues={tickValues}
                     domain={{ x: [1980, 2022] }}
-                    label='Years (1980 - 2022)'
-                    labelComponent={
-                        <VictoryLabel
-                            dy={-1000}
-                        />
-                    }
                 />
 
                 {/* Y axis for student count */}
                 <VictoryAxis dependentAxis
                     orientation="left"
-                    domain={{ y: [100, 12000] }}
+                    domain={{ y: [300, 8000] }}
                 />
                 {/* Total undergraduate students at Brown bar */}
                 <VictoryBar
                     data={data}
-                    x="Year"
+                    x="YEAR"
                     y="TOTAL STUDENTS"
                 />
                 {/* Total Black undergraduate students at Brown bar */}
                 <VictoryBar
                     style={{ data: { fill: "#c43a31" } }}
                     data={data}
-                    x="Year"
+                    x="YEAR"
                     y="TOTAL BLACK STUDENTS"
                 />
             </VictoryChart>

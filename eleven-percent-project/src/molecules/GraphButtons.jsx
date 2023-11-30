@@ -1,5 +1,6 @@
 import React from 'react'
 import GraphButton from '../atoms/GraphButton'
+import '../style/GraphStyle.css'
 const GraphButtons = ({setGraph}) => {
   return (
     <div className='graph-buttons'>

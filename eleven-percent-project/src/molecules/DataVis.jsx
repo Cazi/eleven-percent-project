@@ -6,8 +6,10 @@ import StudentBarGraph from '../atoms/StudentBarGraph';
 import StudentPercentageGraph from '../atoms/StudentPercentageGraph';
 import UgBarGraph from '../atoms/UgBarGraph';
 import UgPercentageGraph from '../atoms/UgPercentageGraph'
+import GrBarGraph from '../atoms/GrBarGraph';
 import GraphButtons from './GraphButtons';
-
+import GrPercentageGraph from '../atoms/GrPercentageGraph';
+import '../style/DataVisStyle.css'
 //Students Data
 const studentData = [
     {
@@ -718,17 +720,34 @@ const DataVis = () => {
     } else if (graph === "undergradBar") {
         displayGraph =
             <>
-                <UgBarGraph />
+                <UgBarGraph
+                    tickValues={yearValues}
+                    data={undergraduateData} />
             </>
     } else if (graph === "undergradPercent") {
         displayGraph =
             <>
-                <UgPercentageGraph />
+                <UgPercentageGraph
+                    tickValuesX={yearValues}
+                    tickValuesY={percentRange}
+                    data={undergraduateData} />
             </>
     } else if (graph === "gradBar") {
-        return (<>Placeholder 1</>)
+        displayGraph =
+            <>
+                <GrBarGraph
+                    tickValues={yearValues}
+                    data={graduateData} />
+            </>
     } else if (graph === "gradPercent") {
-        return (<>Placeholder 2</>)
+        displayGraph =
+            <>
+                <GrPercentageGraph
+                    tickValuesX={yearValues}
+                    tickValuesY={percentRange}
+                    data={graduateData}
+                />
+            </>
     } else {
         displayGraph =
             <>
@@ -740,7 +759,9 @@ const DataVis = () => {
     }
     return (
         <div>
-            {displayGraph}
+            <div className='DataVis'>
+                {displayGraph}
+            </div>
             <GraphButtons setGraph={setGraph} />
         </div>
     )
