@@ -35,6 +35,7 @@ const UgBarGraph = ({ tickValues, data }) => {
                     y="TOTAL BLACK STUDENTS"
                 />
             </VictoryChart>
+            <p className='label'>Undergraduate Black Students vs Total Undergraduates Bar Graph</p>
         </div>
     )
 }

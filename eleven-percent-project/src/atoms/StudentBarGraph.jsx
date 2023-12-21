@@ -35,6 +35,7 @@ const StudentBarGraph = ({ tickValues, data }) => {
                     y="TOTAL BLACK STUDENTS"
                 />
             </VictoryChart>
+            <p className='label'>Total Black Students vs Total Students Bar Graph</p>
         </div>
     )
 }

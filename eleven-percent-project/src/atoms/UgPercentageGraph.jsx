@@ -25,7 +25,9 @@ const UgPercentageGraph = ({ tickValuesX, tickValuesY, data }) => {
           x="YEAR"
           y="PERCENTAGE" />
       </VictoryChart>
+      <p className='label'>Undergraduate Black Students vs Total Undergraduates by Percentage</p>
     </div>
+    
   )
 }
 

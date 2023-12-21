@@ -1,8 +1,22 @@
-
 .graph-buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: left right 10%;
 }
-.graph-button {}
+
+.graph-button button {
+    color: #bbb;
+    background-color: #293f50;
+
+}
+
+.graph-button button:hover {
+    transition: .3s;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.label {
+    text-align: center;
+}

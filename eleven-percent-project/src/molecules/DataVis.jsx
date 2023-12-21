@@ -761,8 +761,8 @@ const DataVis = () => {
         <div>
             <div className='DataVis'>
                 {displayGraph}
+                <GraphButtons setGraph={setGraph} />
             </div>
-            <GraphButtons setGraph={setGraph} />
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const GraphButton = ({ setGraph, graphName }) => {
     return (
-        <div>
+        <div className='graph-button'>
             <button onClick={
                 () => {
                     setGraph(graphName)

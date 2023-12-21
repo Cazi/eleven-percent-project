@@ -26,6 +26,7 @@ const GrPercentageGraph = ({ tickValuesX, tickValuesY, data }) => {
                     x="YEAR"
                     y="PERCENTAGE" />
             </VictoryChart>
+            <p className='label'>Graduate Black Students vs Total Graduate Students by Percentage</p>
         </div>
     )
 }
